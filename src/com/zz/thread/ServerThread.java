@@ -19,7 +19,7 @@ public class ServerThread extends Thread {
 	public void run() {
 		// Server中的方法拷贝到此处
 		try {
-			String path = socket.getInetAddress().toString();
+			String path = socket.getInetAddress().getHostAddress();
 			File file = new File("e:\\" + path);
 			if(!file.exists()){
 				file.mkdir();
